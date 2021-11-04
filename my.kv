@@ -1,0 +1,213 @@
+#:kivy 2.0.0
+
+<ScreenOne>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"Привет! Выбери свой курс)"
+        Button:
+            text:'1 курс'
+            on_press: root.manager.current='sem1k'
+        Button:
+            text:'2 курс'
+            on_press: root.manager.current='sem2k'
+        Button:
+            text:'3 курс'
+            on_press: root.manager.current='sem3k'
+        Button:
+            text:'4 курс'
+            on_press: root.manager.current='sem4k'
+        Button:
+            text:'5 курс'
+            on_press: root.manager.current='sem5k'
+
+<Sem1k>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"А теперь выбери семестр)"
+        Button:
+            text:'1 семестр'
+            on_press: root.manager.current='dis1k1s'
+        Button:
+            text:'2 семестр'
+            on_press: root.manager.current='screen1'
+
+<Sem2k>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"А теперь выбери семестр)"
+        Button:
+            text:'1 семестр'
+            on_press: root.manager.current='screen1'
+        Button:
+            text:'2 семестр'
+            on_press: root.manager.current='screen1'
+
+<Sem3k>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"А теперь выбери семестр)"
+        Button:
+            text:'1 семестр'
+            on_press: root.manager.current='screen1'
+        Button:
+            text:'2 семестр'
+            on_press: root.manager.current='screen1'
+
+<Sem4k>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"А теперь выбери семестр)"
+        Button:
+            text:'1 семестр'
+            on_press: root.manager.current='screen1'
+        Button:
+            text:'2 семестр'
+            on_press: root.manager.current='screen1'
+
+<Sem5k>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:"А теперь выбери семестр)"
+        Button:
+            text:'1 семестр'
+            on_press: root.manager.current='screen1'
+        Button:
+            text:'2 семестр'
+            on_press: root.manager.current='screen1'
+
+<Dis1k1s>:
+    ScrollView:
+        size_hint_y: .99
+        pos_hint:{'x':0,'y':.1}
+        do_scroll_x: False
+        do_scroll_y: True
+        BoxLayout:
+            size:(root.width, root.height)
+            row:16
+            orientation:'vertical'
+            size_hint_x:1
+            size_hint_y:None
+            padding: 10
+            Label:
+                text:"Ещё немного выбора! Какой предмет?)"
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Английский"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Химия"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"История"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Политология"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Начертательная геометрия"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Инженерная графика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"БЖД"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Бухгалтерский учет"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Делопроизводство"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Детали машин"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Макроэконимика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Макроэконимика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Макроэконимика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Макроэконимика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+            Button:
+                text:"Макроэконимика"
+                on_press:root.manager.current='screen1'
+                size_hint_y:None
+                height:40
+
+<Manager>:
+    id:screen_manager
+    screen_one:screen_one
+    sem1k:sem1k
+    sem2k:sem2k
+    sem3k:sem3k
+    sem4k:sem4k
+    sem5k:sem5k
+    dis1k1s:dis1k1s
+    ScreenOne:
+        id:screen_one
+        name:'screen1'
+        manager:screen_manager
+    Sem1k:
+        id:sem1k
+        name:'sem1k'
+        manager:screen_manager
+    Sem2k:
+        id:sem2k
+        name:'sem2k'
+        manager:screen_manager
+    Sem3k:
+        id:sem3k
+        name:'sem3k'
+        manager:screen_manager
+    Sem4k:
+        id:sem4k
+        name:'sem4k'
+        manager:screen_manager
+    Sem5k:
+        id:sem5k
+        name:'sem5k'
+        manager:screen_manager
+    Dis1k1s:
+        id:dis1k1s
+        name:'dis1k1s'
+        manager:screen_manager
